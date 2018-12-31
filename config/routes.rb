@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # Root Route
+  root 'demo#index'
+
   # Simple route
   get 'demo/index'
 
