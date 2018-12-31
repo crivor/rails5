@@ -4,6 +4,8 @@ class DemoController < ApplicationController
   end
 
   def hello
+  	@array =  [1,2,3,4,5]
+  	render('hello')
   end
 
 end

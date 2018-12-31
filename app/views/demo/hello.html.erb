@@ -1,4 +1,10 @@
 <h1>Hello World from hello</h1>
 
 
-<% 1 +1 %>
+<% 1 +1 %><br />
+
+<% @array.each do |n| %>
+	<%= n %><br />
+<% end %>
+
+<%= link_to('Index page', {:action => 'index'}) %><br />
