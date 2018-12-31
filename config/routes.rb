@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # Simple route
   get 'demo/index'
+  get 'demo/hello'
 
   # Default Route
   #get ':controller(/:action(/:id))'
