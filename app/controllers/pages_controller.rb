@@ -9,13 +9,13 @@ class PagesController < ApplicationController
   end
 
   def new
-    @page =Page.new
+    @page = Page.new
   end
 
   def create
     @page = Page.new(page_params)
     if @page.save
-      flash[:notice] = "Page Created Successfully."
+      flash[:notice] = "Page created successfully."
       redirect_to(pages_path)
     else
       render('new')
@@ -29,7 +29,7 @@ class PagesController < ApplicationController
   def update
     @page = Page.find(params[:id])
     if @page.update_attributes(page_params)
-      flash[:notice] = "Page Updated Successfully."
+      flash[:notice] = "Page updated successfully."
       redirect_to(page_path(@page))
     else
       render('edit')
@@ -43,8 +43,14 @@ class PagesController < ApplicationController
   def destroy
     @page = Page.find(params[:id])
     @page.destroy
-    flash[:notice] = "Page Destroyed Successfully."
+    flash[:notice] = "Page destroyed successfully."
     redirect_to(pages_path)
+  end
+
+  private
+
+  def page_params
+    params.require(:page).permit(:subject_id, :name, :position, :visible, :permalink)
   end
 
 end
