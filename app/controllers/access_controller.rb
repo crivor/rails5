@@ -1,5 +1,7 @@
 class AccessController < ApplicationController
 
+  layout 'admin'
+
   def menu
   end
 
