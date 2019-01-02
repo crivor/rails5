@@ -17,7 +17,7 @@ class AdminUser < ApplicationRecord
   # validates_presence_of :last_name
   # validates_length_of :last_name, :maximum => 50
   # validates_presence_of :username
-  # validates_length_of :username, :within => 8..25
+  # validates_length_of :username, :within => 6..25
   # validates_uniqueness_of :username
   # validates_presence_of :email
   # validates_length_of :email, :maximum => 100
@@ -29,7 +29,7 @@ class AdminUser < ApplicationRecord
                          :length => { :maximum => 25 }
   validates :last_name, :presence => true,
                         :length => { :maximum => 50 }
-  validates :username, :length => { :within => 8..25 },
+  validates :username, :length => { :within => 6..25 },
                        :uniqueness => true
   validates :email, :presence => true,
                     :length => { :maximum => 100 },
