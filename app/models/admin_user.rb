@@ -8,7 +8,7 @@ class AdminUser < ApplicationRecord
   has_many :section_edits
   has_many :sections, :through => :section_edits
 
-  EMAIL_REGEX = /\A[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}\Z/i
+  EMAIL_REGEX = /\A[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]+\Z/i
   FORBIDDEN_USERNAMES = ['littlebopeep','humptydumpty','marymary']
 
   # "long form" validations
